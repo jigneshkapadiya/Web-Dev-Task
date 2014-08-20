@@ -1,0 +1,32 @@
+/*
+	Seventh Avenue
+*/
+
+#subGlobalNavigation ul { border-color: #F30A28; }
+
+/* level 1 */
+#localNavigation ul li a { border-color: #F27989; }
+#localNavigation ul li a:hover, 
+#localNavigation ul li#currentPage, 
+#localNavigation ul li ul li#currentPage, 
+#localNavigation ul li ul li ul li#currentPage  { border-left-color: #F30A28; background-color: #F2B6BE;}
+
+/* level 2 */
+#localNavigation ul li ul li {  border-bottom: 1px solid #FFE3E3; }
+#localNavigation ul li ul li a {  background-color: #FFE3E3; }
+
+/* level 3 */
+#localNavigation ul li ul li ul li a {background-color: #FFEBEB; }
+
+
+div#footer { border-color: #F30A28; }
+h1,h2,h3,h4,h5,h6 { color: #F30A28; /*background-image: url(red/redsquare.gif);*/ }
+h3,h4,h5,h6 { /*background-image: url(red/highlightbox.gif);*/ }
+table tr th { background-color: #F27989; }
+td.lightbg, tr.lightbg td, .displayTable td, .displayTable th, .displayTable { border-color: #F65757; }
+td.medbg, tr.medbg td { background-color: #FFE3E3; border-color: #F65757; }
+.infoBlock { background-color:#F30A28; border-color: #9C1729; }
+.highlightLink { background-color: #FFD9DE; border-color: #F30A28; }
+.highlightLink:hover { background-color: #FFBFC8; }
+.landingPictureBlock img { border-color: #F30A28; }
+.quickLinks a:hover { background-color: #F2B6BE; border-color:  #F30A28;  }

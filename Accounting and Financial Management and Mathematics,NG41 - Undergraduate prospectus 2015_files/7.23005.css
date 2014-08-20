@@ -1,0 +1,730 @@
+/* Id: 7.23005.1406816806
+ * Generated: 17-Aug-2014 19:27:13
+ */
+
+/* =Table of contents
+------------------------------------------------------------------------------ */
+/*
+   Typography
+   Overall
+
+   Global menu - from JS include
+   Global Nav
+   Sub-Global Nav
+
+   Search Box
+   Breadcrumbs
+   Header
+
+   Local Nav
+   Local Nav Level 2
+   Local Nav Level 3
+
+   Right Column
+   Table
+   Footer - from JS include
+   Footer
+
+   Misc
+   Form
+
+*/
+/* ------------------------------------------------------------------------- */
+
+
+/* =Typography
+------------------------------------------------------------------------------ */
+@import url(//fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: "TUOS Stephenson", Georgia, Times, serif;
+   color: #BE3B39; /* red */
+   font-weight: normal;
+   line-height: 1.2em;
+}
+
+h1 {
+   font-size: 32px;
+}
+
+h2 {
+   font-size: 26px;
+}
+
+h3 {
+   font-size: 22px;
+}
+
+h4 {
+   font-size: 18px;
+}
+
+/* =Overall
+------------------------------------------------------------------------------ */
+
+/* stop Chrome from using anti-aliased on text */
+html {
+   -webkit-font-smoothing: auto !important;
+}
+
+body {
+   font-family:"Open Sans", Arial, sans-serif;
+   font-size:13px;
+   color: #414042; /* dark dark grey */
+   margin: 0 auto;
+   max-width: 1280px;
+   min-width: 300px;
+   position: relative;
+}
+
+body, #header {
+   background-color: #F1F2F2;
+}
+
+/* Force sections to use new font type */
+#bodyContainer,
+#localNavigationContainer,
+#localNavigation {
+   font-family:"Open Sans", Arial, sans-serif;
+   font-size: 13px;
+}
+
+#bodyContainer {
+   padding: 5px 5px 10px 20px;
+   background-color: #fff;
+}
+
+hr {
+   border: 5px solid #F1F2F2;
+   margin: 40px 0;
+   width: 100%;
+}
+#inner ul {
+   padding-left: 30px;
+}
+
+#contentContainer {
+   width: 100%;
+}
+
+/* =Global menu - from JS include
+------------------------------------------------------------------------------ */
+.menu-main {
+   position: absolute;
+   top: 155px !important;
+   z-index: 5;
+}
+.menu-main, .menu-sub {
+   padding-left: 0;
+   width: 215px;
+}
+.menu-main a {
+   text-decoration: none;
+}
+.menu-sub {
+   display: none;
+}
+.menu-item {
+   list-style-type: none;
+}
+.menu-item > a {
+   background-color: black;
+   display: block;
+   padding: 12px 9px 12px 12px;
+   color: white;
+}
+.radius-top-left {
+   -webkit-border-top-left-radius: 5px;
+   -moz-border-radius-topleft: 5px;
+   border-top-left-radius: 5px;
+}
+.radius-bottom-left {
+   -webkit-border-bottom-left-radius: 5px;
+   -moz-border-radius-bottomleft: 5px;
+   border-bottom-left-radius: 5px;
+}
+.icon-hamburger {
+   background: url('/polopoly_fs/7.23005.1406816806!/hamburger.png');
+   display: inline-block;
+   width: 15px;
+   height: 12px;
+   background-position: 0;
+   float: right;
+   margin-top: 2px;
+}
+.icon-arrow {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   display: inline-block;
+   background-position: -594px;
+}
+.icon-arrow:hover {
+   background-position: -194px;
+}
+.nav-opacity {
+   opacity: 0.2;
+   filter: alpha(opacity = 20);
+   zoom:1;
+}
+
+/* =Global Nav
+------------------------------------------------------------------------------ */
+#globalNavigation {
+   background-color: #333132;
+   border: none;
+   padding: 0;
+   height: 40px;
+}
+
+#globalNavigation > a:first-child,
+#globalNavigation > img {
+   display: none;
+}
+
+#globalNavigation > span > a {
+   display: inline-block;
+   background-color: #000;
+   padding: 12px 0 10px 5px;
+   padding: 12px 5px \9;
+}
+
+#globalNavigation > span > a:hover {
+   text-decoration: none;
+}
+
+#globalNavigation > span:nth-child(3) > a  {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -4372px;
+   background-color: #030000;
+   color: transparent;
+}
+
+#globalNavigation > span:nth-child(3) > a:hover {
+   background-color: #0066b3;
+}
+
+/* Remove Contact link from navigation */
+#globalNavigation > span:nth-child(4) {
+   display: none;
+}
+
+/* Login into muse link */
+#globalNavigation > span:nth-child(5) > a {
+   padding-right: 76px;
+   padding-left: 7px;
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -638px;
+   background-color: #030000;
+   margin-left: -10px; /* fix hides the pipe on the home button */
+}
+
+#globalNavigation > span:nth-child(5) > a:hover {
+   background-position: -238px;
+}
+
+/* =Sub-Global Nav
+------------------------------------------------------------------------------ */
+#subGlobalNavigation {
+   display: none;
+}
+
+/* =Search Box
+------------------------------------------------------------------------------ */
+#searchterms {
+   height: 38px;
+   width: 213px;
+   border: none;
+   padding-left: 12px;
+}
+
+#searchBox input, #searchBox select {
+   margin-top: -7px;
+   margin-right: -5px;
+   padding-right: 20px;
+   color: #414042;
+   max-width: 193px;
+}
+
+/* remove search label */
+#searchBox > p > label {
+   display: none;
+}
+
+#searchBox > p > .submit,
+#searchBox > p > .submit:hover {
+   position: absolute;
+   top: 11px;
+   right: 0;
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -4784px;
+   background-color: #fff;
+   border: none;
+   text-indent: -60px;
+   color: transparent;
+   *font-size: 0; /* IE7 fix */
+   *height: 17px; /* IE7 fix */
+}
+
+#searchBox > p > .submit:hover {
+   cursor: pointer;
+}
+
+/* =Breadcumbs
+------------------------------------------------------------------------------ */
+   
+#breadcrumbs {
+   position: absolute;
+   top: 116px;
+   left: 210px;
+   padding: 0;
+   margin: 7px 0 0 24px;
+   background-color: #F1F2F2;
+}
+
+#breadcrumbs,
+#breadcrumbs a {
+   color: #606E71;
+   text-decoration: none;
+}
+
+#breadcrumbs a:hover {
+   color: #606E71;
+}
+
+/* =Header
+------------------------------------------------------------------------------ */
+#header {
+   margin: 4px 0 12px;
+}
+
+#headerRight {
+   padding-top: 0;
+}
+
+#header #pageTitle {
+   color: #404041;
+}
+
+/**** start: Fix to remove flash title and diplay regular ****/
+.sIFR-hasFlash #pageTitle {
+   visibility: visible;
+}
+
+.sIFR-flash {
+   display: none !important;
+}
+
+span.sIFR-alternate {
+   visibility: visible !important;
+   overflow: visible !important;
+   position: inherit !important;
+   display: inline !important;
+   *position: relative !important; /* IE 7 fix */
+   font-family: "TUOS Stephenson", Georgia, "Times New Roman", Times,serif;
+}
+/* end: Fix to remove flash title and diplay regular */
+
+/* =Local Navigation
+------------------------------------------------------------------------------ */
+#localNavigation {
+   z-index: 0;
+   width: 214px;
+}
+
+#localNavigationContainer {
+   width: 215px;
+}
+
+/* Fixes padding on list items */
+#localNavigation > ul > li > a, #localNavigation > ul > li > ul > li > a, #localNavigation > ul > li > ul > li > ul > li > a {
+   padding: 12px 35px 12px 10px;
+}
+
+#localNavigation ul li ul li ul li a {
+   padding-left: 12px;
+}
+
+/* Removes border on list items */
+#localNavigation li {
+   border: none !important;
+}
+
+#localNavigation ul > li > ul > li {
+   background-color: #fff;
+}
+
+#localNavigation li a {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -598px;
+   background-color: #414042;
+}
+
+#localNavigation li a:hover {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -198px;
+   background-color: #58595B;
+}
+
+#localNavigation > ul > li, #localNavigation > ul > li > a, #localNavigation > ul > li > a:hover {
+   border: none;
+   color: #fff;
+   margin-bottom: 0;
+}
+
+#localNavigation > ul > li > a, #localNavigation > ul > li > a:hover {
+   background-color: #030000;
+   padding-right: 28px;
+}
+
+#localNavigation ul li#currentPage a {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -819px; /* blue arrow */
+   background-color: #fff;
+   color: #BE3B39; /* blue text */
+}
+
+#localNavigation > ul > li#currentPage > a {
+   background-position: -820px;  /* blue arrow */
+}
+
+#localNavigation ul li#currentPage a {
+   border-color: #fff;
+}
+
+#localNavigation > ul > li > ul > li#currentPage > a {
+   background-position: -820px !important;  /* blue arrow */
+}
+
+#localNavigation > ul > li:first-child > a {
+   background-color: #BE3B39;
+   color: #fff;
+   background-image: none;
+}
+
+/* =Local Nav Level 2
+------------------------------------------------------------------------------ */
+   
+#localNavigation ul li ul li,
+#localNavigation ul li ul li {
+   border: none;
+}
+
+#localNavigation ul li#currentPage ul li a,
+#localNavigation ul li#currentPage ul li a:hover {
+   background-color: #414042;
+   margin-left: 6px;
+   color: #fff;
+   padding: 12px 35px 12px 12px !important;
+   background-position: -600px;
+}
+
+#localNavigation ul li ul li a,
+#localNavigation ul li ul li a:hover {
+   background-color: #414042;
+   color: #fff;
+   padding-left: 12px;
+   padding-right: 28px;
+   background-position: -598px;
+}
+
+/* =Local Nav level 3
+------------------------------------------------------------------------------ */   
+#localNavigation ul li ul li a:hover {
+   background-position: -198px;
+}
+
+#localNavigation ul li#currentPage ul li a:hover {
+   background-position: -200px;
+}
+
+#localNavigation ul li ul li ul li#currentPage ul li a,
+#localNavigation ul li ul li ul li#currentPage ul li a:hover {
+   background-color: #58595B;
+}
+
+#localNavigation ul li ul li ul li ul li {
+   border: none;
+   background-color: #fff;
+}
+
+/* Rounded border top left first list item */
+#localNavigation > ul > li:first-child > a {
+   -webkit-border-top-left-radius: 5px;
+   -moz-border-radius-topleft: 5px;
+   border-top-left-radius: 5px;
+}
+
+/* Rounded border bottom left last list item */
+#localNavigation > ul > li:last-child > a {
+   -webkit-border-bottom-left-radius: 5px;
+   -moz-border-radius-bottomleft: 5px;
+   border-bottom-left-radius: 5px;
+}
+
+#localNavigation > ul > li#currentPage > a,
+#localNavigation > ul > li > ul > li#currentPage > a,
+#localNavigation > ul > li > ul > li > ul > li#currentPage > a {
+   background-color: #fff;
+   border-left-color: #fff;
+}
+
+/* =Right Column
+------------------------------------------------------------------------------ */
+.quickLinks a:hover {
+   background-color: #f0d7da;
+   border-color: #BE3B39;
+}
+
+/* =Table
+------------------------------------------------------------------------------ */
+table tr th {
+  background-color: #BE3B39 !important;
+  color: #fff; 
+}
+
+table.striped,
+table.striped tr td,
+table.standard,
+table.standard tr td {
+   border: 1px solid  #BE3B39 !important;
+}
+
+td.medbg, tr.medbg td {
+   background-color: #ffeeef !important;
+   border-color: #ffeeef !important;
+}
+
+td.lightbg, tr.lightbg td {
+   border-color: #fff !important;
+}
+
+.subjectTable {
+   margin-left: 0 !important;
+   margin-right: 0 !important;
+   display: inline-block;
+}
+
+/* Qualification table */
+/*#qualifications tr:nth-child(2n) td {
+   background-color: #f0d7da;
+}*/
+
+#qualifications th, #qualifications td {
+   border: 1px solid #E5E0DC;
+   background-color: #fff;
+}
+
+/*#qualifications tr.pinkbg td {
+   background-color: #F7BBB7 !important;
+}*/
+
+/* =Footer - from JS include
+----------------------------------------------- */
+.pg-btm {
+   background: none repeat scroll 0 0 #414042;
+   margin-top: 40px;
+clear: both;
+}
+.pg-btm .top-inner, .pg-btm .btm-inner {
+   margin: 0 auto;
+   max-width: 1280px;
+   overflow: hidden;
+   width: 100%;
+}
+.pg-btm .top-inner {
+   padding: 50px 0;
+}
+.pg-btm .btm-inner {
+   padding: 20px 0;
+}
+.footer-links {
+   float: left;
+   padding-left: 12px;
+}
+.uni-address {
+   background: url('/polopoly_fs/7.23005.1406816806!/arrow-sprite.png');
+   background-position: -7200px;
+   float: right;
+   height: 90px;
+   padding: 0 12px 0 130px;
+}
+.uni-address address {
+   color: white;
+   font-style: normal;
+   line-height: 1.5;
+}
+/* Footer nav */
+.footer-nav {
+   margin: 0 0 40px;
+}
+.footer-nav ul {
+   list-style: none outside none;
+   padding-left: 0;
+}
+.footer-nav ul li {
+   display: inline;
+}
+.footer-nav ul a {
+   color: white;
+   margin: 0 40px 0 0;
+   text-decoration: none;
+}
+.footer-nav ul a:hover {
+   text-decoration: underline;
+}
+/* Footer social */
+.footer-social p {
+   color: white;
+   display: block;
+   float: left;
+   height: 45px;
+   line-height: 45px;
+   margin: 0 20px 0 0;
+}
+.footer-social ul {
+   display: block;
+   float: left;
+   height: 45px;
+   list-style: none outside none;
+   margin: 0 40px 0 0;
+}
+.footer-social li {
+   display: inline;
+}
+.footer-social li.tw a {
+background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -1px;
+   background-color: #2CAAE1;
+}
+.footer-social li.tw a:hover {
+   background-color: #1B8DBF;
+}
+.footer-social li.fb a {
+background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -53px;
+   background-color: #3E5A99;
+}
+.footer-social li.fb a:hover {
+   background-color: #2F4575;
+}
+.footer-social li.yt a {
+background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -103px;
+   background-color: #F1F2F2;
+}
+.footer-social li.yt a:hover {
+   background-color: #D7D9D9;
+}
+.footer-social li.weibo a {
+background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -153px;
+   background-color: #F1F2F2;
+}
+.footer-social li.weibo a:hover {
+   background-color: #E4E6E6;
+}
+.footer-social li.l-in a {
+   background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -203px;
+   background-color: #007CB6;
+}
+.footer-social li.l-in a:hover {
+   background-color: #005983;
+}
+.footer-social li.g-plus a {
+   background: url('/polopoly_fs/7.23005.1406816806!/social-sprite.png');
+   background-position: -250px;
+   background-color: #DD4A39;
+}
+.footer-social li.g-plus a:hover {
+   background-color: #D73825;
+}
+.footer-social li a {
+   display: block;
+   float: left;
+   height: 45px;
+   text-indent: -9999px;
+   width: 45px;
+}
+
+/* =Footer
+------------------------------------------------------------------------------ */
+div#footer {
+   background-color: #000;
+   color: #FFF;
+   margin: 0;
+   padding: 10px 0 30px;
+   border-top: none;
+}
+
+div#footer a {
+   color: #fff;
+}
+
+#footerLeft a.twitter,
+#footerLeft a.facebook,
+#footerLeft a.youtube {
+   display: none;
+}
+
+/* =Misc
+----------------------------------------------------------------------------- */
+#courseSummary,#department, #modules, #studentprofile, #graduates, #userDefinedTab, #whatnext {
+   background-color: #F1F2F2;
+}
+
+#modules table {
+   background-color: #fff !important;
+}
+
+/* Tabs */
+.active, li.tabSummary a:hover, li.tabDepartment a:hover, li.tabModules a:hover, li.tabProfiles a:hover, li.tabUserDefined a:hover, li.tabGraduates a:hover, li.tabWhatnext a:hover {
+   background: url('/polopoly_fs/7.23005.1406816806!/tab-red.png') top right !important;
+}
+
+/* Feature box */
+.feature {
+   border-top: 5px solid #BE3B39;
+   border-right: 1px solid #ddd;
+   border-bottom: 1px solid #ddd;
+   border-left: 1px solid #ddd;
+   padding: 0 10px;
+   max-width: 230px;
+   display: block;
+}
+
+.feature > ul {
+   list-style-type: none;
+   padding-left: 0;
+}
+
+.feature > div > strong {
+   font-family: "TUOS Stephenson",Georgia,"Times New Roman",Times,serif;
+   font-weight: normal;
+   font-size: 20px;
+   color: #BE3B39;
+   display: block;
+   margin-top: 10px;
+}
+
+td.feature {
+   max-width: 100%;
+   margin-right: 20px;
+}
+
+/* =Form
+----------------------------------------------------------------------------- */
+
+/* Bursay calc and myProspectus */
+table.bursary th,
+table.emailMyProspectus th  {
+   background-color: #f0d7da !important;
+   color: #414042 !important;
+}
+
+table.bursary td,
+table.emailMyProspectus td {
+   background-color: #faedef !important;
+}
+
+
+      
